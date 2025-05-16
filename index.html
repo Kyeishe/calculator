@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MathWizard - Advanced Calculator</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <h1>MathWizard</h1>
+    <p>Master math with calculation, challenges, and explanations</p>
+  </header>
+
+  <main class="container">
+    <section class="card" id="calculator">
+      <h2>Calculator</h2>
+      <input type="text" id="calcInput" placeholder="Enter expression (e.g. 5 * (3 + 2))">
+      <button onclick="calculate()">Calculate</button>
+      <p><strong>Result:</strong> <span id="calcResult">-</span></p>
+      <p><strong>Explanation:</strong> <span id="calcExplanation">-</span></p>
+    </section>
+
+    <section class="card" id="challenge">
+      <h2>Math Challenge Mode</h2>
+      <div id="challengeBox">
+        <p id="challengeQuestion">Click "Start" for a challenge!</p>
+        <input type="number" id="challengeAnswer" placeholder="Your answer" />
+        <button onclick="checkAnswer()">Submit</button>
+        <button onclick="generateChallenge()">Start</button>
+        <p><strong>Score:</strong> <span id="scoreBoard">0</span></p>
+        <p><strong>Feedback:</strong> <span id="challengeFeedback">-</span></p>
+        <p><strong>Explanation:</strong> <span id="challengeExplanation">-</span></p>
+        <div>
+            <label>Select Difficulty:</label>
+                <select id="difficultySelect" onchange="generateChallenge(this.value)">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                    <option value="expert">Expert</option>
+                </select>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="video-background">
+  <video autoplay loop muted playsinline>
+    <source src="vid/v2.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+<!-- Your page content -->
+<div class="content">
+  <h1>Welcome to MathWizard</h1>
+  <p>Learn and challenge your math skills!</p>
+</div>
+
+
+
+  <footer>
+    <p>"Created by: Rey Allen Bayudan/Mark Jaynel Constantino"</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
